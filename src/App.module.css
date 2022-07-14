@@ -1,7 +1,11 @@
 .main{
     min-height: 60vh;
     text-align: center;
+    justify-content: center;
     padding: 2em;
+    height: 100%;
+    padding-top: 200px;
+    
     
 }
 

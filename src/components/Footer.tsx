@@ -8,7 +8,8 @@ const Footer = () => {
     <div>
       <footer className={styles.footer}>
         <p>
-          <span>Lange</span> @ 2022
+          <span>Made with ❤️ by <a href="https://github.com/mateusleitao">Lange</a></span> @ 2022
+          
         </p>
       </footer>
     </div>

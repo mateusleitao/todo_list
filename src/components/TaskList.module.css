@@ -4,7 +4,8 @@
     max-width: 400px;
     margin: 0 auto;
     border-bottom: 1px solid #ccc;
-    padding: 1em
+    margin-bottom: 40px;
+    padding: 1em;
 }
 
 .details { 
