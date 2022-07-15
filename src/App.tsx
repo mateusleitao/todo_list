@@ -7,10 +7,22 @@ import TaskList from "./components/TaskList";
 
 import { ITask } from "./interfaces/Task";
 import Modal from "./components/Modal";
+import {initializeApp} from "firebase/app";
+import {getFirestore} from "firebase/firestore";
+
+
+const firebaseApp = initializeApp({
+  apiKey: "AIzaSyBQZh0b1TSZ8A7N-YWQjVDe-EBVhpZ52zY",
+  authDomain: "todolist-1dde5.firebaseapp.com",
+  projectId: "todolist-1dde5"
+});
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
   const [taskToUpdate, setTaskToUpdate] = useState<ITask | null>(null);
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState ("")
+  const [users, setUsers] = useState([])
 
   const deleteTask = (id: number) => {
     setTaskList(

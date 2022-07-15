@@ -11,6 +11,7 @@
     "@types/node": "^16.11.43",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "firebase": "^9.9.0",
     "homepage": ".",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
