@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styles from "./App.module.css";
@@ -8,7 +8,7 @@ import TaskList from "./components/TaskList";
 import { ITask } from "./interfaces/Task";
 import Modal from "./components/Modal";
 import {initializeApp} from "firebase/app";
-import {getFirestore} from "firebase/firestore";
+import {getDocs, getFirestore, collection} from "firebase/firestore";
 
 
 const firebaseApp = initializeApp({
@@ -20,9 +20,7 @@ const firebaseApp = initializeApp({
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
   const [taskToUpdate, setTaskToUpdate] = useState<ITask | null>(null);
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState ("")
-  const [users, setUsers] = useState([])
+  
 
   const deleteTask = (id: number) => {
     setTaskList(
